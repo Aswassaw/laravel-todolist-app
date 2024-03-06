@@ -14,12 +14,8 @@ class UserServiceImpl implements UserService
 
   public function login(string $username, string $password): bool
   {
-    if (isset($this->users[$username])) {
-      return false;
-    }
+    if (!isset($this->users[$username])) return false;
 
-    $correctPassword = $this->users[$username];
-
-    return $password !== $correctPassword;
+    return $password === $this->users[$username];
   }
 }
