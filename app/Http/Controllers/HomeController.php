@@ -6,5 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    //
+    public function home(Request $request)
+    {
+        if ($request->session()->exists("username")) {
+            return redirect("/todolist");
+        } else {
+            return redirect("/login");
+        }
+    }
 }
