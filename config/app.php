@@ -173,6 +173,7 @@ return [
          * My Service Providers...
          */
         App\Providers\UserServiceProvider::class,
+        App\Providers\TodolistServiceProvider::class,
     ])->toArray(),
 
     /*
