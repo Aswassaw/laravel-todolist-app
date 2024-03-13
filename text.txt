@@ -1,2 +1,3 @@
 - php artisan make:provider UserServiceProvider
 - php artisan make:test UserServiceTest
+- php artisan make:middleware OnlyMemberMiddleware
