@@ -29,6 +29,6 @@ Route::controller(UserController::class)->group(function () {
 
 Route::controller(TodolistController::class)->middleware(OnlyMemberMiddleware::class)->group(function () {
     Route::get("/todolist", "todoList");
-    Route::post("/todoList", "addTodo");
-    Route::post("/todoList/{id}/delete", "removeTodo");
+    Route::post("/todolist", "addTodo");
+    Route::post("/todolist/{id}/delete", "removeTodo");
 });
